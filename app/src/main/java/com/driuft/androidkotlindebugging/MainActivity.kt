@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchHelloWorldActivity() {
-        val i = Intent(404 as Context, HelloWorldActivity::class.java)
+        //val i = Intent(404 as Context, HelloWorldActivity::class.java) this line is forcing casting 404 to a context
+        val i = Intent(this, HelloWorldActivity::class.java) // refering to the current Activity as the context
+
         startActivity(i)
     }
 

@@ -14,7 +14,9 @@ class NumSumActivity : AppCompatActivity() {
         setContentView(R.layout.activity_num_sum)
 
         val a = 2
-        val b = "2" as Int
+        // This is right as it parse string to int
+        val b = "2".toInt()
+        /* val b = "2" as Int is wrong cause we want to convert not cast*/
 
         resultText.text = "${sumOfTwo(a, b)}"
     }
